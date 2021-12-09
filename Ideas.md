@@ -17,6 +17,12 @@
 ## Fake Identity Creator
 - Avatar generator API + Random User API
 
+# ---------------- This Idea WINS! ----------------
+
 ## Should I Bring a Coat?
-- Use weather API to determine if it's raincoat weather
-    - Possibly use Giphy to add weather gifs
+- Use weather API to determine what clothing is appropriate for the current weather and display suggestions in the form of gifs.
+
+### APIs
+- GIFs: ![Giphy](https://rapidapi.com/giphy/api/giphy)
+- Weather: ![NWS](https://rapidapi.com/theapiguy/api/national-weather-service/)
+- Location: ![Geocoding](https://openweathermap.org/api/geocoding-api)

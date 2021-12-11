@@ -28,3 +28,7 @@
 - GIFs: [Giphy](https://rapidapi.com/giphy/api/giphy)
 - Weather: [NWS](https://rapidapi.com/theapiguy/api/national-weather-service/)
 - Location: [Geocoding](https://openweathermap.org/api/geocoding-api)
+
+### Wireframe Screenshots
+![Wireframe Screenshot](<!-- link to wireframe screenshot asset goes here! -->)
+![Wireframe Screenshot2](<!-- link to wireframe screenshot asset goes here! -->)

@@ -1,4 +1,5 @@
-var cityName = $(cityName)
+var cityNameEl = document.querySelector("#cityName")
+var cityInputEl = document.querySelector("#cityInput")
 
 var formSubmitHandler = function (event) {
     event.preventDefault();
@@ -31,3 +32,5 @@ var geoData = function (city) {
             }
         });
 }
+
+cityInputEl.addEventListener("submit", formSubmitHandler);

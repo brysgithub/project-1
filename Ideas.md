@@ -30,5 +30,5 @@
 - Location: [Geocoding](https://openweathermap.org/api/geocoding-api)
 
 ### Wireframe Screenshots
-![Wireframe Screenshot](<!-- link to wireframe screenshot asset goes here! -->)
-![Wireframe Screenshot2](<!-- link to wireframe screenshot asset goes here! -->)
+![Wireframe Screenshot](./assets/images/ScreenshotWelcome.png)
+![Wireframe Screenshot2](./assets/images/ScreenshotAfterWelcome.png)

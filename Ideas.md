@@ -26,8 +26,8 @@
 - CSS Framework: [Foundation](https://get.foundation/sites/getting-started.html)
 
 - GIFs: [Giphy](https://rapidapi.com/giphy/api/giphy)
-- Weather: [NWS](https://rapidapi.com/theapiguy/api/national-weather-service/)
-- Location: [Geocoding](https://openweathermap.org/api/geocoding-api)
+- Weather/ location: [Weather API-Ninjas](https://rapidapi.com/apininjas/api/weather-by-api-ninjas/)
+<!-- - Location: [Geocoding](https://openweathermap.org/api/geocoding-api) -->
 
 ### Wireframe Screenshots
 ![Wireframe Screenshot](./assets/images/ScreenshotWelcome.png)

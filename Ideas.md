@@ -23,6 +23,8 @@
 - Use weather API to determine what clothing is appropriate for the current weather and display suggestions in the form of gifs.
 
 ### APIs
-- GIFs: ![Giphy](https://rapidapi.com/giphy/api/giphy)
-- Weather: ![NWS](https://rapidapi.com/theapiguy/api/national-weather-service/)
-- Location: ![Geocoding](https://openweathermap.org/api/geocoding-api)
+- CSS Framework: [Foundation](https://get.foundation/sites/getting-started.html)
+
+- GIFs: [Giphy](https://rapidapi.com/giphy/api/giphy)
+- Weather: [NWS](https://rapidapi.com/theapiguy/api/national-weather-service/)
+- Location: [Geocoding](https://openweathermap.org/api/geocoding-api)

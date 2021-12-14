@@ -17,7 +17,7 @@ var formSubmitHandler = function (event) {
 };
 
 var weatherNinja = function (city) {
-    
+
     var weatherNinjaUrl = `https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=${city}&`
 
     fetch(weatherNinjaUrl, {
@@ -27,35 +27,35 @@ var weatherNinja = function (city) {
             "x-rapidapi-key": "70ae343f6dmsh7bf694b2328aaa6p16256fjsn232bf43b441a"
         }
     })
-    .then(function (response) {
-        if (response.ok) {
-            console.log(response);
-            response.json().then(function (data) {
-                console.log(data);
-                
-                if (data.feels_like <= 10) {
-                    searchTerm += "Cold"
-                } else if (data.feels_like >= 25) {
-                    searchTerm += "Hot"
-                } else {
-                    searchTerm += "Nice"
-                }
-                if (data.cloud_pct >= 75) {
-                    searchTerm += "+Rainy"
-                }
-                giphySearch(searchTerm)
-                console.log(searchTerm)
-            });
-        } else {
-            alert("Error: " + response.statusText);
-        };
-    });
+        .then(function (response) {
+            if (response.ok) {
+                console.log(response);
+                response.json().then(function (data) {
+                    console.log(data);
+
+                    if (data.feels_like <= 10) {
+                        searchTerm += "Cold"
+                    } else if (data.feels_like >= 25) {
+                        searchTerm += "Hot"
+                    } else {
+                        searchTerm += "Nice"
+                    }
+                    if (data.cloud_pct >= 75 && data.humidity >= 85) {
+                        searchTerm += "+Rainy"
+                    }
+                    giphySearch(searchTerm)
+                    console.log(searchTerm)
+                });
+            } else {
+                alert("Error: " + response.statusText);
+            };
+        });
 }
 
 cityInputEl.addEventListener("submit", formSubmitHandler);
 
 function giphySearch(searchTerm) {
-    
+
     var giphyUrl = `https://giphy.p.rapidapi.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&q=${searchTerm}`
     console.log(searchTerm);
 
@@ -66,14 +66,14 @@ function giphySearch(searchTerm) {
             "x-rapidapi-key": "c79b1b3c61msh7a879540aede5e2p1b1548jsn1a5e1ce01f0d"
         }
     })
-    .then(function (response) {
-        if (response.ok) {
-            console.log(response);
-            response.json().then(function (data) {
-                console.log(data);
-            });
-        } else {
-            alert("Error: " + response.statusText);
-        };
-    });
+        .then(function (response) {
+            if (response.ok) {
+                console.log(response);
+                response.json().then(function (data) {
+                    console.log(data);
+                });
+            } else {
+                alert("Error: " + response.statusText);
+            };
+        });
 }

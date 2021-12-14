@@ -41,9 +41,9 @@ var weatherNinja = function (city) {
                     searchTerm += "Nice"
                 }
                 if (data.cloud_pct >= 75) {
-                    searchTerm += " Rainy"
+                    searchTerm += "+Rainy"
                 }
-                giphySearch()
+                giphySearch(searchTerm)
                 console.log(searchTerm)
             });
         } else {
@@ -56,7 +56,8 @@ cityInputEl.addEventListener("submit", formSubmitHandler);
 
 function giphySearch(searchTerm) {
     
-    var giphyUrl = `https://giphy.p.rapidapi.com/v1/gifs/search?api_key=undefined&q=${searchTerm}`
+    var giphyUrl = `https://giphy.p.rapidapi.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&q=${searchTerm}`
+    console.log(searchTerm);
 
     fetch(giphyUrl, {
         "method": "GET",

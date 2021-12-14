@@ -1,5 +1,6 @@
 var cityNameEl = document.querySelector("#cityName")
 var cityInputEl = document.querySelector("#cityInput")
+var searchTerm = ""
 
 var formSubmitHandler = function (event) {
     event.preventDefault();
@@ -31,6 +32,18 @@ var weatherNinja = function (city) {
             console.log(response);
             response.json().then(function (data) {
                 console.log(data);
+                
+                if (data.feels_like <= 10) {
+                    searchTerm += "Cold"
+                } else if (data.feels_like >= 25) {
+                    searchTerm += "Hot"
+                } else {
+                    searchTerm += "Nice"
+                }
+                if (data.cloud_pct >= 75) {
+                    searchTerm += " Rainy"
+                }
+                console.log(searchTerm)
             });
         } else {
             alert("Error: " + response.statusText);

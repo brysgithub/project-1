@@ -43,6 +43,7 @@ var weatherNinja = function (city) {
                 if (data.cloud_pct >= 75) {
                     searchTerm += " Rainy"
                 }
+                giphySearch()
                 console.log(searchTerm)
             });
         } else {

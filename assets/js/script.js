@@ -52,3 +52,26 @@ var weatherNinja = function (city) {
 }
 
 cityInputEl.addEventListener("submit", formSubmitHandler);
+
+function giphySearch(searchTerm) {
+    
+    var giphyUrl = `https://giphy.p.rapidapi.com/v1/gifs/search?api_key=undefined&q=${searchTerm}`
+
+    fetch(giphyUrl, {
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "giphy.p.rapidapi.com",
+            "x-rapidapi-key": "c79b1b3c61msh7a879540aede5e2p1b1548jsn1a5e1ce01f0d"
+        }
+    })
+    .then(function (response) {
+        if (response.ok) {
+            console.log(response);
+            response.json().then(function (data) {
+                console.log(data);
+            });
+        } else {
+            alert("Error: " + response.statusText);
+        };
+    });
+}

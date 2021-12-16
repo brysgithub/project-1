@@ -1,3 +1,6 @@
+* {
+    font-family: 'Contrail One', cursive;
+}
 body {
     background: url("https://images.pexels.com/photos/2539395/pexels-photo-2539395.jpeg?cs=srgb&dl=pexels-sergei-a-2539395.jpg&fm=jpg") 50% no-repeat;
     height: 100vh;
@@ -17,14 +20,20 @@ body {
     background-color: transparent;
 } 
 
+.menu-text {
+    font-size: 40px;
+}
+
 .footer a{
     position: absolute;
     bottom: 10px;
-    color: rgba(255, 255, 255, 0.582);
+    color: rgba(232, 243, 73, 0.822);
     left: 50%;
+    font: 35px;
 }
 
 .creditBody {
+    justify-content: center;
     top: 100px;
     vertical-align: middle;
     background-color: rgba(255, 255, 255, 0.432);
@@ -34,8 +43,14 @@ body {
     border-radius: 15px;
     margin: 0 auto;
     color: rgb(32, 133, 124);
- 
+}
+
+h1,
+ h3 {
+    font-family: 'Contrail One', cursive;
    
 }
+
+
 
 

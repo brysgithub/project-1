@@ -1,5 +1,7 @@
 var cityNameEl = document.querySelector("#cityName")
 var cityInputEl = document.querySelector("#cityInput")
+var gifContainerEl = document.querySelector("#gifChoice")
+var searchedCityEl = document.querySelector("#searchedCity")
 var searchTerm = ""
 
 var formSubmitHandler = function (event) {
@@ -48,7 +50,7 @@ var weatherNinja = function (city) {
                 });
             } else {
                 $('#errorModal').foundation('open');
-                $("#statusText").append(response.statusText);
+                $("#statusText").html(response.statusText);
             };
         });
 }
@@ -70,12 +72,20 @@ function giphySearch(searchTerm) {
         .then(function (response) {
             if (response.ok) {
                 console.log(response);
-                response.json().then(function (data) {
-                    console.log(data);
+                response.json().then(function (gifs) {
+                    function renderGif() {
+                        console.log(gifs)
+                        var gifChoice = gifs.data[0].images.original.url;
+                        var gif = document.createElement("img")
+                        gif.src = gifChoice
+                        gifContainerEl.append(gif)
+                    }
+                    console.log(gifs);
+                    renderGif()
                 });
             } else {
                 $('#errorModal').foundation('open');
-                $("#statusText").append(response.statusText);
+                $("#statusText").html(response.statusText);
             };
         });
 }

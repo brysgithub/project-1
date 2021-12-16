@@ -47,7 +47,6 @@ var weatherNinja = function (city) {
                     console.log(searchTerm)
                 });
             } else {
-                // response.statusText
                 $('#errorModal').foundation('open');
                 $("#statusText").append(response.statusText);
             };
@@ -75,7 +74,6 @@ function giphySearch(searchTerm) {
                     console.log(data);
                 });
             } else {
-                // response.statusText
                 $('#errorModal').foundation('open');
                 $("#statusText").append(response.statusText);
             };

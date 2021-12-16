@@ -12,7 +12,8 @@ var formSubmitHandler = function (event) {
 
         cityNameEl.value = "";
     } else {
-        alert("Please enter a valid location");
+        // alert("Please enter a valid location");
+        $('#invalidLocation').foundation('open');
     }
 };
 
@@ -47,7 +48,8 @@ var weatherNinja = function (city) {
                     console.log(searchTerm)
                 });
             } else {
-                alert("Error: " + response.statusText);
+                // alert("Error: " + response.statusText);
+                $('#errorModal').foundation('open');
             };
         });
 }
@@ -73,7 +75,8 @@ function giphySearch(searchTerm) {
                     console.log(data);
                 });
             } else {
-                alert("Error: " + response.statusText);
+                // alert("Error: " + response.statusText);
+                $('#errorModal').foundation('open');
             };
         });
 }

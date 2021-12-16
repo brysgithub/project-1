@@ -1,6 +1,6 @@
 var cityNameEl = document.querySelector("#cityName")
 var cityInputEl = document.querySelector("#cityInput")
-var gifContainerEl = document.querySelector("#gifChoice")
+// var gifContainerEl = document.querySelector("#gifChoice")
 var searchedCityEl = document.querySelector("#searchedCity")
 var searchTerm = ""
 
@@ -78,7 +78,7 @@ function giphySearch(searchTerm) {
                         var gifChoice = gifs.data[0].images.original.url;
                         var gif = document.createElement("img")
                         gif.src = gifChoice
-                        gifContainerEl.append(gif)
+                        $("#gifChoice").html(gif)
                     }
                     console.log(gifs);
                     renderGif()

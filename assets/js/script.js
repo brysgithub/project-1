@@ -6,12 +6,14 @@ var responseText = document.querySelector("#responseText")
 var searchTerm = ""
 var responseData = ""
 
+// Adds saved gif url to favorites
 var savedGifs = localStorage.getItem("favoriteGif")
 if (!savedGifs) {
 } else {
      $("#favoriteGifs").append(`<a href = ${savedGifs}>${savedGifs}</a>`)
 }
 
+// Handles entered search terms and calls error modal if entry is invalid
 var formSubmitHandler = function (event) {
     event.preventDefault();
 
@@ -29,6 +31,7 @@ var formSubmitHandler = function (event) {
     $(".result-card").removeClass("hidden");
 };
 
+// Calls weather API to get weather data and outputs simple search terms
 var weatherNinja = function (city) {
 
     var weatherNinjaUrl = `https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=${city}&`
@@ -73,6 +76,7 @@ var weatherNinja = function (city) {
 
 cityInputEl.addEventListener("submit", formSubmitHandler);
 
+// Calls Giphy API and passes in search terms from WeatherNinja function to display weather gi
 function giphySearch(searchTerm) {
 
     var giphyUrl = `https://giphy.p.rapidapi.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&q=${searchTerm}`
@@ -107,6 +111,7 @@ function giphySearch(searchTerm) {
         });
 }
 
+// Grabs gif URL from img element to save to favorites
 $("#saveButton").click(function saveGif() {
     var favGif = $("img[src^='https://']").attr('src');
     localStorage.setItem("favoriteGif", favGif)

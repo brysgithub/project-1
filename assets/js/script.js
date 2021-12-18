@@ -7,7 +7,10 @@ var searchTerm = ""
 var responseData = ""
 
 var savedGifs = localStorage.getItem("favoriteGif")
-$("#favoriteGifs").append(`<a href = ${savedGifs}>${savedGifs}</a>`)
+if (!savedGifs) {
+} else {
+     $("#favoriteGifs").append(`<a href = ${savedGifs}>${savedGifs}</a>`)
+}
 
 var formSubmitHandler = function (event) {
     event.preventDefault();

@@ -1,6 +1,6 @@
 var cityNameEl = document.querySelector("#cityName")
 var cityInputEl = document.querySelector("#cityInput")
-// var gifContainerEl = document.querySelector("#gifChoice")
+var currentCity = document.querySelector("#currentCity")
 var searchedCityEl = document.querySelector("#searchedCity")
 var searchTerm = ""
 

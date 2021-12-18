@@ -42,13 +42,13 @@ var weatherNinja = function (city) {
 
                     if (data.feels_like <= 10) {
                         searchTerm += "Cold"
-                        responseData += "Cold"
+                        responseData = "Cold"
                     } else if (data.feels_like >= 25) {
                         searchTerm += "Hot"
-                        responseData += "Hot"
+                        responseData = "Hot"
                     } else {
                         searchTerm += "Nice"
-                        responseData += "Nice"
+                        responseData = "Nice"
                     }
                     if (data.cloud_pct >= 75 && data.humidity >= 85) {
                         searchTerm += "+Rainy"

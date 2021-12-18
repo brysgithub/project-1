@@ -42,9 +42,9 @@ var weatherNinja = function (city) {
     })
         .then(function (response) {
             if (response.ok) {
-                console.log(response);
+                // console.log(response);
                 response.json().then(function (data) {
-                    console.log(data);
+                    // console.log(data);
 
                     if (data.feels_like <= 10) {
                         searchTerm += "Cold"
@@ -61,7 +61,7 @@ var weatherNinja = function (city) {
                         responseData += " & Rainy"
                     }
                     giphySearch(searchTerm)
-                    console.log(searchTerm)
+                    // console.log(searchTerm)
                     responseText.innerHTML = responseData
                 });
             } else {
@@ -76,7 +76,7 @@ cityInputEl.addEventListener("submit", formSubmitHandler);
 function giphySearch(searchTerm) {
 
     var giphyUrl = `https://giphy.p.rapidapi.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&q=${searchTerm}`
-    console.log(searchTerm);
+    // console.log(searchTerm);
 
     fetch(giphyUrl, {
         "method": "GET",
@@ -87,17 +87,17 @@ function giphySearch(searchTerm) {
     })
         .then(function (response) {
             if (response.ok) {
-                console.log(response);
+                // console.log(response);
                 response.json().then(function (gifs) {
                     function renderGif() {
-                        console.log(gifs)
+                        // console.log(gifs)
                         var gifChoice = gifs.data[0].images.original.url;
                         var gif = document.createElement("img")
                         gif.src = gifChoice
                         $("#gifChoice").html(gif)
                         
                     }
-                    console.log(gifs);
+                    // console.log(gifs);
                     renderGif()
                 });
             } else {

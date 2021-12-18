@@ -42,9 +42,10 @@ body {
     border-radius: 15px;
     margin: 0 auto;
     color: rgb(32, 133, 124);
+   
 }
 
-h1 {
+.creditName{
     font-family: 'Contrail One', cursive;
    
 }

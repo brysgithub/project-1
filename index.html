@@ -1,91 +1,118 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sweata Weatha</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Contrail+One&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="./assets/images/sweater.png">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Contrail+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="./assets/images/sweater.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
 
-
-</head>
-
-<body>
+  <body>
+    <div class="bg"></div>
 
     <div class="top-bar" id="responsive-menu">
-        <div class="top-bar-left">
-            <ul class="dropdown menu" data-dropdown-menu>
-                <img src="./assets/images/sweater.png" alt="yellow sweater icon" width="50" height="50">
-                <li class="menu-text">Sweata Weatha</li>
-                <li class="has-submenu">
-                    <a href="#0">Favorite GIFs</a>
-                    <ul class="submenu menu vertical" data-submenu>
-                        <li><a href="#0">One</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <div class="top-bar-right">
-            <form class="menu" id="cityInput">
-                <input id="cityName" type="search" placeholder=" &#x1F50D; Type City Name">
-                <!-- <button type="submit" class="button">Search</button> -->
-            </form>
-        </div>
+      <div class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li class="menu-text">Sweata Weatha</li>
+          <li class="has-submenu">
+            <a href="#0">Favorite GIFs</a>
+            <ul class="submenu menu vertical" data-submenu></ul>
+          </li>
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <form class="menu" id="cityInput">
+          <input
+            id="cityName"
+            type="search"
+            placeholder=" &#x1F50D; Type City Name"
+          />
+          <!-- <button type="submit" class="button">Search</button> -->
+        </form>
+      </div>
     </div>
 
-    <br>
+    <br />
 
-    <!-- card element(hidden until user searches for city) -->
     <div class="result-card hidden">
-
-        <div class="card absolute-center">
-            <div class="card-divider" id="currentCity">
-                <h1 id="currentCity">*city name*</h1>
-            </div>
-
-            <div id="gifChoice"></div>
-
-            <div class="card-section">
-                <p id="responseText">*This is where the response text will go!* </p>
-                <input id="formCheckbox1" type="checkbox"><label for="formCheckbox1">Favorite GIF</label>
-            </div>
-
+      <div class="card absolute-center">
+        <div class="card-divider" id="currentCity">
+          <h1 id="currentCity">*city name*</h1>
         </div>
+
+        <div id="gifChoice"></div>
+
+        <div class="card-section">
+          <p id="responseText">*This is where the response text will go!*</p>
+          <button
+            id="saveButton"
+            type="button"
+            class="button success small expanded"
+          >
+            Save GIF
+          </button>
+        </div>
+      </div>
     </div>
 
     <div class="reveal" id="invalidLocation" data-reveal>
-        <h1>Invalid Location</h1>
-        <p class="lead">Please enter a valid location</p>
-        <button class="close-button" data-close aria-label="Close modal" type="button">
-            <span aria-hidden="true">&times;</span>
-        </button>
+      <h1>Invalid Location</h1>
+      <p class="lead">Please enter a valid location</p>
+      <button
+        class="close-button"
+        data-close
+        aria-label="Close modal"
+        type="button"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
     </div>
 
     <div class="reveal" id="errorModal" data-reveal>
-        <h1>Error</h1>
-        <p id="statusText" class="lead"></p>
-        <button class="close-button" data-close aria-label="Close modal" type="button">
-            <span aria-hidden="true">&times;</span>
-        </button>
+      <h1>Error</h1>
+      <p id="statusText" class="lead"></p>
+      <button
+        class="close-button"
+        data-close
+        aria-label="Close modal"
+        type="button"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
     </div>
 
     <div class="footer"><a href="credits.html"> Credits</a></div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/foundation.min.js"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/foundation.min.js"
+      crossorigin="anonymous"
+    ></script>
     <script>
-        $(document).foundation();
+      $(document).foundation();
     </script>
     <script src="./assets/js/script.js"></script>
-
-</body>
-
+  </body>
 </html>

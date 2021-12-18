@@ -89,7 +89,7 @@ function giphySearch(searchTerm) {
                         var gif = document.createElement("img")
                         gif.src = gifChoice
                         $("#gifChoice").html(gif)
-
+                        
                     }
                     console.log(gifs);
                     renderGif()
@@ -100,3 +100,8 @@ function giphySearch(searchTerm) {
             };
         });
 }
+
+$("#saveButton").click(function saveGif() {
+    var favGif = $("img[src^='https://']").attr('src');
+    localStorage.setItem("favoriteGif", favGif)
+});

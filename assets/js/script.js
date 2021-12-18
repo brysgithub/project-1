@@ -2,7 +2,9 @@ var cityNameEl = document.querySelector("#cityName")
 var cityInputEl = document.querySelector("#cityInput")
 var currentCity = document.querySelector("#currentCity")
 var searchedCityEl = document.querySelector("#searchedCity")
+var responseText = document.querySelector("#responseText")
 var searchTerm = ""
+var responseData = ""
 
 var formSubmitHandler = function (event) {
     event.preventDefault();
@@ -40,16 +42,21 @@ var weatherNinja = function (city) {
 
                     if (data.feels_like <= 10) {
                         searchTerm += "Cold"
+                        responseData += "Cold"
                     } else if (data.feels_like >= 25) {
                         searchTerm += "Hot"
+                        responseData += "Hot"
                     } else {
                         searchTerm += "Nice"
+                        responseData += "Nice"
                     }
                     if (data.cloud_pct >= 75 && data.humidity >= 85) {
                         searchTerm += "+Rainy"
+                        responseData += " & Rainy"
                     }
                     giphySearch(searchTerm)
                     console.log(searchTerm)
+                    responseText.innerHTML = responseData
                 });
             } else {
                 $('#errorModal').foundation('open');

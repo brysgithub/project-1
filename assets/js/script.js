@@ -13,6 +13,7 @@ var formSubmitHandler = function (event) {
         weatherNinja(cityName);
 
         cityNameEl.value = "";
+        currentCity.innerHTML = cityName
     } else {
         $('#invalidLocation').foundation('open');
     }
@@ -81,6 +82,7 @@ function giphySearch(searchTerm) {
                         var gif = document.createElement("img")
                         gif.src = gifChoice
                         $("#gifChoice").html(gif)
+
                     }
                     console.log(gifs);
                     renderGif()

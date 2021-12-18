@@ -6,6 +6,9 @@ var responseText = document.querySelector("#responseText")
 var searchTerm = ""
 var responseData = ""
 
+var savedGifs = localStorage.getItem("favoriteGif")
+$("#favoriteGifs").append(savedGifs)
+
 var formSubmitHandler = function (event) {
     event.preventDefault();
 

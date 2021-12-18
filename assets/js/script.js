@@ -16,6 +16,8 @@ var formSubmitHandler = function (event) {
     } else {
         $('#invalidLocation').foundation('open');
     }
+
+    $(".result-card").removeClass("hidden");
 };
 
 var weatherNinja = function (city) {

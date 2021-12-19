@@ -71,3 +71,9 @@ body {
 .drop-down-bg {
     background-color: white;
 }
+
+#giphy-logo {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

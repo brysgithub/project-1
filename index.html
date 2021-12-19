@@ -20,13 +20,13 @@
 <body>
     <div class="bg"></div>
 
-    <div class="top-bar" id="responsive-menu">
+    <header class="top-bar" id="responsive-menu">
         <div class="top-bar-left">
             <ul class="dropdown menu" data-dropdown-menu>
                 <img src="./assets/images/sweater.png" alt="yellow sweater icon" width="50" height="50">
                 <li class="menu-text">Sweata Weatha</li>
                 <li class="has-submenu">
-                    <a href="#0">Favorite GIFs</a>
+                    <a href="#0">Favorite GIF</a>
                     <ul class="submenu menu vertical" id="favoriteGifs" data-submenu></ul>
                 </li>
             </ul>
@@ -37,11 +37,11 @@
                 <!-- <button type="submit" class="button">Search</button> -->
             </form>
         </div>
-    </div>
+    </header>
 
     <br />
 
-    <div class="result-card hidden">
+    <main class="result-card hidden">
         <div class="card absolute-center">
             <div class="card-divider" id="currentCity">
                 <h1 id="currentCity">*city name*</h1>
@@ -56,7 +56,7 @@
                 </button>
             </div>
         </div>
-    </div>
+    </main>
 
     <div class="reveal" id="invalidLocation" data-reveal>
         <h1>Invalid Location</h1>
@@ -74,7 +74,7 @@
         </button>
     </div>
 
-    <div class="footer"><a href="credits.html"> Credits</a></div>
+    <footer class="footer"><a href="credits.html"> Credits</a></footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

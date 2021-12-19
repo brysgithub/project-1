@@ -1,9 +1,20 @@
-# project-1
+# Sweata Weatha
 
 - A fun and simple application to search for a city, and display a gif based on the current weather conditions.
 
 ## Description
 This application lets a user to enter a city in the search bar to display a fun gif portraying the current weather condition.  The application then lets the user save their favorite gif by clicking on the 'Save GIF' button to be saved to local storage and retrieve under favorite gif dropdown menu.
+
+## Technologies Used
+- HTML
+- CSS
+- Javascript
+- Foundation Framework
+- GitHub
+- Google Fonts
+- Rapid API
+    - Giphy API
+    - Weather - Ninja API
 
 ## Deployed link 
 [Deployed Page Link](https://brysgithub.github.io/project-1/)

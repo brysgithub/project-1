@@ -19,6 +19,9 @@ This application lets a user to enter a city in the search bar to display a fun 
 ## Deployed link 
 [Deployed Page Link](https://brysgithub.github.io/sweata-weatha/)
 
+## GitHub Repository
+[GitHub Repository Link](https://github.com/brysgithub/sweata-weatha)
+
 ## Sweata Weatha Mock-up
 
 The screenshot gifs below demostrate the web application's appearence and funtionality:

@@ -10,7 +10,7 @@ var responseData = ""
 var savedGifs = localStorage.getItem("favoriteGif")
 if (!savedGifs) {
 } else {
-     $("#favoriteGifs").append(`<a href = ${savedGifs}>${savedGifs}</a>`)
+     $("#favoriteGifs").append(`<li class = "drop-down-bg"><a href = ${savedGifs}>${savedGifs}</a></li>`)
 }
 
 // Handles entered search terms and calls error modal if entry is invalid

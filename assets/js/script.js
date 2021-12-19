@@ -93,7 +93,8 @@ function giphySearch(searchTerm) {
       response.json().then(function (gifs) {
         function renderGif() {
           // console.log(gifs)
-          var gifChoice = gifs.data[0].images.original.url;
+          var randomNum = Math.floor(Math.random() * 6)
+          var gifChoice = gifs.data[randomNum].images.original.url;
           var gif = document.createElement("img");
           gif.src = gifChoice;
           $("#gifChoice").html(gif);

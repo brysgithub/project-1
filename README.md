@@ -17,7 +17,7 @@ This application lets a user to enter a city in the search bar to display a fun 
     - Weather - Ninja API
 
 ## Deployed link 
-[Deployed Page Link](https://brysgithub.github.io/project-1/)
+[Deployed Page Link](https://brysgithub.github.io/sweata-weatha/)
 
 ## Sweata Weatha Mock-up
 

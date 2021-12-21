@@ -30,4 +30,6 @@ The screenshot gifs below demostrate the web application's appearence and funtio
 
 ## Future Development 
 
-For future development, adding the ability to save multiple favorite gifs with workable links.
+- Currently only one gif can be saved to local storage. In the future, code could be added to create a list of saved gifs instead of only one favorite.
+
+- The background is currently an image of Seattle's skyline. A change that could be implemented is add another API to retrieve an image of the searched city and set the background to that.

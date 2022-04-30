@@ -78,7 +78,7 @@ cityInputEl.addEventListener("submit", formSubmitHandler);
 
 // Calls Giphy API and passes in search terms from WeatherNinja function to display weather gi
 function giphySearch(searchTerm) {
-  var giphyUrl = `https://giphy.p.rapidapi.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&q=${searchTerm}`;
+  var giphyUrl = `https://giphy.p.rapidapi.com/v1/gifs/search?api_key=0vQIP8FFI9VcIN8ApDLeWwsPzrFIScXt&q=${searchTerm}`;
   // console.log(searchTerm);
 
   fetch(giphyUrl, {
